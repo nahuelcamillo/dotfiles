@@ -1,0 +1,68 @@
+#!/bin/bash
+
+PACKAGES=(
+    1password
+    1password-cli
+    base-devel
+    bat
+    copyq
+    discord
+    docker
+    docker-compose
+    emojify
+    flameshot
+    forgit
+    freerdp
+    fzf
+    git-secret
+    gitmoji
+    google-cloud-sdk
+    jetbrains-toolbox
+    jitsi-meet-desktop-bin
+    jq
+    kate
+    libinput-gestures
+    libreoffice-fresh
+    lsd
+    net-tools
+    networkmanager
+    network-manager-applet
+    networkmanager-openvpn
+    nodejs-gitmoji-cli
+    notion-app
+    okular
+    openresolv
+    openssh
+    peek
+    postman-bin
+    qemu
+    ranger
+    remmina
+    spotify
+    starship
+    steam
+    sxhkd
+    telegram-desktop
+    thefuck
+    timeshift
+    tmux
+    tree
+    ueberzug
+    variety
+    virt-manager
+    visual-studio-code-bin
+    vlc
+    whatsapp-for-linux
+    xdotool
+    xf86-input-libinput
+    yarn
+    youtube-dl
+    yq
+    zgen
+    zoom
+    zsh
+)
+
+# for pkg in ${PACKAGES[@]}; do
+#     yayInstall $pkg
+#done
