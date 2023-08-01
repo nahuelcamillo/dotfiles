@@ -1,0 +1,48 @@
+swipe:
+  3: # 3-F gersture to Alt Tab Switcher (Windows Style)
+    begin:
+      command: xdotool keydown Alt
+    right:
+      update:
+        command: xdotool key Tab
+        interval: 5
+    left:
+      update:
+        command: xdotool key Shift+Tab
+        interval: 5
+    end:
+      command: xdotool keyup Alt
+
+  4:
+    left:
+      command: "xdotool key alt+Right"
+    right:
+      command: "xdotool key alt+Left"
+    up:
+      command: "xdotool key ctrl+F10" # Present All Windows - Desktop Effect of KDE
+    down:
+      command: "xdotool key ctrl+F10" # Present All Windows - Desktop Effect of KDE
+# swipe:
+#     3:
+#      begin:
+#        command: xdotool mousedown 1
+#      update:
+#        command: xdotool mousemove_relative -- $move_x, $move_y
+#        interval: 0.01
+#        accel: 2
+#      end:
+#        command: xdotool mouseup 1
+pinch:
+  2:
+    in:
+      command: "xdotool keydown ctrl click 4 keyup ctrl" # Zoom in
+    out:
+      command: "xdotool keydown ctrl click 5 keyup ctrl" # Zoom out
+
+threshold:
+  swipe: 0.7
+  pinch: 0.2
+
+interval:
+  swipe: 1
+  pinch: 1
