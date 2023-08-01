@@ -28,7 +28,7 @@ alias cp="cp -iv"
 #             └─ prompt before overwriting an existing file
 
 alias mkdir="mkdir -pv"
-#                   │└─ list created directories
+#                   │└─ list cranuseated directories
 #                   └─ create intermediate directories
 
 alias mv="mv -iv"
@@ -57,6 +57,8 @@ alias p="cd ~/Documents/Projects/"
 alias cheyenne="cd ~/Documents/Projects/Cheyenne"
 alias rabbitup="sudo systemctl start rabbitmq"
 alias rabbitdown="sudo systemctl stop rabbitmq"
+alias vpnl="sudo openvpn ./Documents/VPNs/Lanus/pfsense-UDP4-1194-ncamillo-config.ovpn"
+alias kvpnl="sudo pkill openvpn"
 
 # Git Commands
 alias g="git"
