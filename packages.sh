@@ -5,10 +5,13 @@ PACKAGES=(
     1password-cli
     base-devel
     bat
+    bridge-utils
     copyq
     discord
+    dnsmasq
     docker
     docker-compose
+    ebtables
     emojify
     flameshot
     forgit
@@ -21,16 +24,19 @@ PACKAGES=(
     jitsi-meet-desktop-bin
     jq
     kate
+    libguestfs
     libinput-gestures
     libreoffice-fresh
+    libvirt
     lsd
     net-tools
-    networkmanager
     network-manager-applet
+    networkmanager
     networkmanager-openvpn
     nodejs-gitmoji-cli
     notion-app
     okular
+    openbsd-netcat
     openresolv
     openssh
     peek
@@ -38,6 +44,7 @@ PACKAGES=(
     qemu
     ranger
     remmina
+    ruby-fusuma
     spotify
     starship
     steam
@@ -49,7 +56,9 @@ PACKAGES=(
     tree
     ueberzug
     variety
+    vde2
     virt-manager
+    virt-viewer
     visual-studio-code-bin
     vlc
     whatsapp-for-linux
