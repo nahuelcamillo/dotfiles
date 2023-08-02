@@ -5,11 +5,11 @@ swipe:
     right:
       update:
         command: xdotool key Tab
-        interval: 5
+        interval: 2
     left:
       update:
         command: xdotool key Shift+Tab
-        interval: 5
+        interval: 2
     end:
       command: xdotool keyup Alt
 
