@@ -1,14 +1,10 @@
 # Use powerline
 USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
-source /usr/share/nvm/init-nvm.sh
+
+[[ -r ~/.antidote ]] || git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+autoload -Uz compinit && compinit
+antidote load
 
 # Useful Commands
 
@@ -50,6 +46,7 @@ alias nrd="npm run dev"
 alias ns="npm start"
 alias cl="clear"
 alias ip='curl -X GET "https://httpbin.org/ip" -H "accept: application/json"'
+alias resetant='antidote update'
 
 
 # Work Commands
@@ -69,7 +66,7 @@ alias co="git checkout"
 alias gc="git clone"
 alias gpl="git pull"
 # Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -81,8 +78,10 @@ if ! zgen saved; then
   zgen oh-my-zsh
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/tmux
-  #zgen load spaceship-prompt/spaceship-prompt spaceship
+  zgen load spaceship-prompt/spaceship-prompt spaceship
+  zgen load lukechilds/zsh-nvm
 
   # generate the init script from plugins above
   zgen save
 fi
+
