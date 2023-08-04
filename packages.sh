@@ -3,6 +3,8 @@
 PACKAGES=(
     1password
     1password-cli
+    alacritty
+    antidote
     base-devel
     bat
     bridge-utils
@@ -29,6 +31,7 @@ PACKAGES=(
     libreoffice-fresh
     libvirt
     lsd
+    nerd-fonts-meta
     net-tools
     network-manager-applet
     networkmanager
@@ -70,6 +73,7 @@ PACKAGES=(
     zgen
     zoom
     zsh
+    zsh-defer
 )
 
 # for pkg in ${PACKAGES[@]}; do
