@@ -22,3 +22,4 @@ wfxr/forgit           kind:defer
 djui/alias-tips       kind:defer
 lukechilds/zsh-nvm    kind:defer
 matthieusb/zsh-sdkman kind:defer
+spaceship-prompt/spaceship-prompt
