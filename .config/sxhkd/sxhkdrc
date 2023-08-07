@@ -28,3 +28,6 @@ super + g
 
 super + alt + v
     code
+
+super + a
+    alacritty
