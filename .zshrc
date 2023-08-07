@@ -52,9 +52,9 @@ alias resetant='antidote update'
 # Work Commands
 alias p="cd ~/Documents/Projects/"
 alias cheyenne="cd ~/Documents/Projects/Cheyenne"
-alias rabbitup="sudo systemctl start rabbitmq"
-alias rabbitdown="sudo systemctl stop rabbitmq"
-alias vpnl="sudo openvpn ./Documents/VPNs/Lanus/pfsense-UDP4-1194-ncamillo-config.ovpn"
+alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
+alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
+alias vpnl="sudo openvpn ~/Documents/VPNs/Lanus/pfsense-UDP4-1194-ncamillo-config.ovpn"
 alias kvpnl="sudo pkill openvpn"
 
 # Git Commands
@@ -67,6 +67,3 @@ alias gc="git clone"
 alias gpl="git pull"
 # Dotfiles
 alias cfg='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-
-
