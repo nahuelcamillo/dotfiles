@@ -54,7 +54,7 @@ alias p="cd ~/Documents/Projects/"
 alias cheyenne="cd ~/Documents/Projects/Cheyenne"
 alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
-alias vpnl="sudo openvpn ~/Documents/VPNs/Lanus/pfsense-UDP4-1194-ncamillo-config.ovpn"
+alias vpnl="sudo openvpn ~/.config/openvpn/profiles/pfsense-UDP4-1194-ncamillo.ovpn"
 alias kvpnl="sudo pkill openvpn"
 
 # Git Commands
