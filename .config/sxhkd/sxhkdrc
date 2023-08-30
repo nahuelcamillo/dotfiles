@@ -23,11 +23,33 @@ super + shift + 5
 # Open/Init applications
 #
 
-super + g
-    google-chrome-stable
+super + shift + a; f
+		firefox
 
-super + alt + v
-    code
+super + shift + a; d
+		firefox-developer-edition
 
-super + a
-    alacritty
+super + shift + a; g
+		google-chrome-stable
+
+super + shift + a; v
+		code
+
+super + shift + a; a
+		alacritty
+
+super + shift + a; m
+		mailspring
+
+super + shift + a; n
+		notion-app
+
+super + shift + a; s
+		spotify
+
+super + shift + a; t
+		telegram-desktop
+
+super + shift + a; w
+		firefox --new-window "https://web.whatsapp.com/"
+
