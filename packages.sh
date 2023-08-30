@@ -15,6 +15,8 @@ PACKAGES=(
     docker-compose
     ebtables
     emojify
+    firefox
+    firefox-developer-edition
     flameshot
     forgit
     freerdp
