@@ -15,6 +15,7 @@ PACKAGES=(
     docker-compose
     ebtables
     emojify
+    feh
     firefox
     firefox-developer-edition
     flameshot
@@ -24,6 +25,10 @@ PACKAGES=(
     git-secret
     gitmoji
     google-cloud-sdk
+    i3
+    i3blocks
+    i3lock
+    i3status
     jetbrains-toolbox
     jitsi-meet-desktop-bin
     jq
@@ -49,6 +54,7 @@ PACKAGES=(
     qemu
     ranger
     remmina
+    rofi
     ruby-fusuma
     spotify
     starship
@@ -66,7 +72,8 @@ PACKAGES=(
     virt-viewer
     visual-studio-code-bin
     vlc
-    whatsapp-for-linux
+    whatsapp-nativefier
+    wmctrl
     xdotool
     xf86-input-libinput
     yarn
