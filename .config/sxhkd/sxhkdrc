@@ -54,5 +54,5 @@ super + shift + a; t
 		telegram-desktop
 
 super + shift + a; w
-		firefox --new-window "https://web.whatsapp.com/"
+		whatsapp-nativefier
 

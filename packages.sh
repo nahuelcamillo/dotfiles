@@ -56,6 +56,7 @@ PACKAGES=(
     remmina
     rofi
     ruby-fusuma
+    skippy-xd
     spotify
     starship
     steam
