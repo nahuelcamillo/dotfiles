@@ -78,6 +78,7 @@ PACKAGES=(
     xdotool
     xf86-input-libinput
     yarn
+    yay
     youtube-dl
     yq
     zgen
