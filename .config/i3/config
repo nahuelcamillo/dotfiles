@@ -118,10 +118,10 @@ mode "resize" {
 #	Pressing right will grow the window’s width.
 #	Pressing up will shrink the window’s height.
 #	Pressing down will grow the window’s height.
-	bindsym $wm_setting_key_left  resize shrink width 10 px or 10 ppt
-	bindsym $wm_setting_key_down  resize grow height 10 px or 10 ppt
-	bindsym $wm_setting_key_up    resize shrink height 10 px or 10 ppt
-	bindsym $wm_setting_key_right resize grow width 10 px or 10 ppt
+	bindsym $wm_setting_key_left  resize shrink width 5 px or 5 ppt
+	bindsym $wm_setting_key_down  resize grow height 5 px or 5 ppt
+	bindsym $wm_setting_key_up    resize shrink height 5 px or 5 ppt
+	bindsym $wm_setting_key_right resize grow width 5 px or 5 ppt
 
 #	Resize the gap width and height
 	bindsym $smod+$wm_setting_key_left  gaps horizontal minus 5
@@ -134,8 +134,6 @@ mode "resize" {
 	bindsym Escape mode "default"
 	bindsym $mod+r mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 ### Gaps ###
 gaps horizontal $wm_setting_gap_width
@@ -171,6 +169,7 @@ bindsym $mod+$smod+f floating toggle
 
 # Kill the focused window
 bindsym $mod+$smod+q kill
+bindsym Control+q kill
 
 #
 # Change split layout of current container
@@ -183,9 +182,6 @@ bindsym $mod+$smod+v split v
 #
 bindsym Control+$alt+Left move workspace to output left
 bindsym Control+$alt+Right move workspace to output right
-
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+$smod+r restart
 
 # Exit i3 (logs you out of your X session)
 bindsym $mod+$smod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -210,3 +206,98 @@ no_focus [class="plasmashell" window_type="notification"]
 
 # Killing the existing window of Plasma that covers everything
 for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
+
+mode "swap-with-workspace" {
+        bindsym 1 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 1; mode "default"
+        bindsym 2 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 2; mode "default"
+        bindsym 3 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 3; mode "default"
+        bindsym 4 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 4; mode "default"
+        bindsym 5 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 5; mode "default"
+        bindsym 6 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 6; mode "default"
+        bindsym 7 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 7; mode "default"
+        bindsym 8 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 8; mode "default"
+        bindsym 9 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 9; mode "default"
+        bindsym 0 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 10; mode "default"
+        bindsym $alt+1 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 11; mode "default"
+        bindsym $alt+2 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 12; mode "default"
+        bindsym $alt+3 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 13; mode "default"
+        bindsym $alt+4 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 14; mode "default"
+        bindsym $alt+5 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 15; mode "default"
+        bindsym $alt+6 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 16; mode "default"
+        bindsym $alt+7 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 17; mode "default"
+        bindsym $alt+8 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 18; mode "default"
+        bindsym $alt+9 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 19; mode "default"
+        bindsym $alt+0 exec --no-startup-id ~/.config/i3/scripts/renumber_workspace.py 20; mode "default"
+
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+}
+
+
+mode "move-to-workspace" {
+        bindsym 1 move container to workspace number 1; mode "default"
+        bindsym 2 move container to workspace number 2; mode "default"
+        bindsym 3 move container to workspace number 3; mode "default"
+        bindsym 4 move container to workspace number 4; mode "default"
+        bindsym 5 move container to workspace number 5; mode "default"
+        bindsym 6 move container to workspace number 6; mode "default"
+        bindsym 7 move container to workspace number 7; mode "default"
+        bindsym 8 move container to workspace number 8; mode "default"
+        bindsym 9 move container to workspace number 9; mode "default"
+        bindsym 0 move container to workspace number 10; mode "default"
+        bindsym $alt+1 move container to workspace number 11; mode "default"
+        bindsym $alt+2 move container to workspace number 12; mode "default"
+        bindsym $alt+3 move container to workspace number 13; mode "default"
+        bindsym $alt+4 move container to workspace number 14; mode "default"
+        bindsym $alt+5 move container to workspace number 15; mode "default"
+        bindsym $alt+6 move container to workspace number 16; mode "default"
+        bindsym $alt+7 move container to workspace number 17; mode "default"
+        bindsym $alt+8 move container to workspace number 18; mode "default"
+        bindsym $alt+9 move container to workspace number 19; mode "default"
+        bindsym $alt+0 move container to workspace number 20; mode "default"
+
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+}
+
+mode "i3-layouts" {
+        bindsym v exec --no-startup-id i3l vstack; mode "default"
+        bindsym h exec --no-startup-id i3l hstack; mode "default"
+        bindsym s exec --no-startup-id i3l spiral; mode "default"
+        bindsym 2 exec --no-startup-id i3l 2columns; mode "default"
+        bindsym 3 exec --no-startup-id i3l 3columns; mode "default"
+        bindsym c exec --no-startup-id i3l companion; mode "default"
+        bindsym a exec --no-startup-id i3l autosplit; mode "default"
+        bindsym n exec --no-startup-id i3l none; mode "default"
+
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+}
+
+mode "i3-command" {
+        bindsym f fullscreen toggle; mode "default"
+        bindsym s layout toggle split; mode "default"
+        bindsym q exec --no-startup-id "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"; mode "default"
+        bindsym r restart
+        bindsym l exec --no-startup-id $HOME/bin/lock-screen --force; mode "default"
+
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+}
+
+mode "gaps" {
+        bindsym Down	gaps outer current plus 5
+        bindsym Left    gaps outer current plus 5
+        bindsym Right   gaps outer current minus 5
+        bindsym Up      gaps outer current minus 5
+
+        bindsym Escape  mode "default"
+        bindsym Return  mode "default"
+}
+
+bindsym $mod+$smod+g mode "gaps"
+bindsym $mod+$smod+i mode "i3-layouts"
+bindsym $mod+$smod+m mode "move-to-workspace"
+bindsym $mod+$smod+r mode "resize"
+bindsym $mod+$smod+s mode "swap-with-workspace"
+bindsym $mod+$smod+x mode "i3-command"
