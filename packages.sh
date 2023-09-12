@@ -22,6 +22,7 @@ PACKAGES=(
     forgit
     freerdp
     fzf
+    galaxybudsclient-bin 
     git-secret
     gitmoji
     google-cloud-sdk

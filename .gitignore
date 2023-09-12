@@ -1,9 +1,4 @@
-# Related to git-secret
+.cfg
+.dotfiles
 .gitsecret/keys/random_seed
 !*.secret
-
-# Secrets
-.config/openvpn/profiles/pfsense-UDP4-1194-ncamillo.ovpn
-.config/openvpn/profiles/SRV-PFSENSE1-movistar.ovpn
-.config/openvpn/profiles/SRV-PFSENSE1-UDP4-1194-ca.crt
-.config/openvpn/profiles/SRV-PFSENSE1-UDP4-1194-tls.key
