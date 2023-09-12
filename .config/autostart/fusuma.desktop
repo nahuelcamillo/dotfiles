@@ -1,6 +1,0 @@
- [Desktop Entry]
-Name=fusuma
-Comment=Fusuma Multitouch Gestores on Linux
-Exec=/usr/bin/fusuma
-Terminal=false
-Type=Application
