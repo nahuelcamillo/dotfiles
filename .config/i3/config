@@ -70,21 +70,6 @@ set $bar_color_workspace_inactive_fg #2E3440
 set $bar_color_workspace_urgent_bg   #D08770
 set $bar_color_workspace_urgent_fg   #2E3440
 
-################# Single and Dual screen
-
-# current displays
-exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
-
-# setting variables for later use
-# use xrandr and/or arandr to know the names of your monitors
-# use this line to tell which monitor is on the right
-# xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
-# exec --no-startup-id xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
-# exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
-# exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
-# exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-# exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
-
 ################# Workspaces
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -98,39 +83,6 @@ set $ws7  "    7    "
 set $ws8  "    8    "
 set $ws9  "    9    "
 set $ws10 "    10    "
-
-# current setup
-
-set $firstMonitor HDMI-1
-set $secondMonitor HDMI-2
-
-# Other Examples
-
-#set $firstMonitor DP3
-#set $secondMonitor LVDS1
-
-#set $firstMonitor DVI-I-0
-#set $secondMonitor HDMI-0
-
-#set $firstMonitor DVI-0
-#set $secondMonitor DVI-1
-
-#set $firstMonitor DVI-I-1
-#set $secondMonitor DVI-D-1
-
-#set $firstMonitor HDMI-1
-#set $secondMonitor HDMI-2
-
-workspace 1 output $firstMonitor
-workspace 2 output $firstMonitor
-workspace 3 output $firstMonitor
-workspace 4 output $firstMonitor
-workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
-workspace 10 output $secondMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -230,10 +182,6 @@ bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+Tab workspace back_and_forth
 
-# navigate workspaces next / previous
-bindsym Mod1+Ctrl+Right workspace next
-bindsym Mod1+Ctrl+Left workspace prev
-
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
@@ -270,8 +218,8 @@ bindsym $mod+a focus parent
 #
 # Move entire focused workspace to left/right output
 #
-bindsym Control+$alt+Left move workspace to output left
-bindsym Control+$alt+Right move workspace to output right
+bindsym Control+Mod1+Left move workspace to output left
+bindsym Control+Mod1+Right move workspace to output right
 
 ################# Resizing
 
@@ -352,6 +300,9 @@ font pango:Noto Mono Regular 13
 
 # USER APPLICATIONS TO START AT BOOT
 
+exec --no-startup-id $HOME/.config/startup/startup-once.sh
+exec_always --no-startup-id $HOME/.config/startup/startup-always.sh
+
 # Autotiling
 exec_always --no-startup-id autotiling
 
@@ -365,12 +316,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Updater
 exec --no-startup-id pamac-tray
-
-# network
-exec --no-startup-id nm-applet
-
-# num lock activated
-exec_always --no-startup-id numlockx on
 
 # volume
 # exec --no-startup-id pasystray
@@ -390,7 +335,6 @@ exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpap
 
 ################# system applications       
 
-exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 # exec --no-startup-id xfsettingsd &
@@ -399,18 +343,6 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 ################# applications keyboard shortcuts  
 
 # not workspace related
-
-# ArcoLinux Welcome App
-bindsym control+mod1+w exec --no-startup-id arcolinux-welcome-app
-
-# ArchLinux Tweak Tool
-bindsym control+mod1+e exec --no-startup-id archlinux-tweak-tool
-
-# conky
-bindsym $mod+c exec --no-startup-id conky-toggle
-bindsym $mod+control+c exec --no-startup-id killall conky
-bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
-bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # Start a terminal emulator
 bindsym $mod+Return exec --no-startup-id alacritty;focus
@@ -433,34 +365,11 @@ bindsym control+mod1+l exec --no-startup-id archlinux-logout
 # rofi theme selector
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
 
-# arcolinux conflict
-# bindsym $mod+m exec --no-startup-id pragha;focus
-
-# htop
-# arcolinux conflict
-# bindsym $mod+h exec --no-startup-id htop;focus
-
 # pavucontrol
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
-# start xfce-appfinder
-# arcolinux does not seem to work
-bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
-
-# pamac-manager
-bindsym control+mod1+p exec --no-startup-id pamac-manager
-
 # xkill
 bindsym --release $mod+Escape exec xkill
-
-# Function Keybinds
-# Browser
-bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
-# qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
-bindsym control+mod1+f exec --no-startup-id firefox;focus
-bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
-bindsym control+mod1+g exec --no-startup-id chromium;focus
 
 # file management
 for_window [class="Thunar"] focus
@@ -468,14 +377,6 @@ bindsym $mod+F8 exec --no-startup-id thunar;focus
 bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
 bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
 bindsym control+mod1+b exec --no-startup-id thunar;focus
-
-################# screenshots                      
-
-bindsym Print exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-bindsym Control+Print exec --no-startup-id xfce4-screenshooter
-bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
-bindsym $mod+Control+Print exec --no-startup-id flameshot gui
-# bindsym shift+Print exec --no-startup-id shutter
 
 ################# floating or tiled rules         
 
@@ -539,10 +440,8 @@ for_window [class="Alacritty"] focus
 bindsym mod1+t exec --no-startup-id variety -t
 # next wallpaper
 bindsym mod1+n exec --no-startup-id variety -n
-bindsym mod1+Right exec --no-startup-id variety -n
 # previous wallpaper
 bindsym mod1+p exec --no-startup-id variety -p
-bindsym mod1+Left exec --no-startup-id variety -p
 # favorite wallpaper
 bindsym mod1+f exec --no-startup-id variety -f
 # pause wallpaper
