@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ACTIVE_VPNS=$($HOME/bin/vpn --active)
+
+if [[ "${ACTIVE_VPNS}" != "" ]]; then
+    echo "%{T3}%{F#20c418}󱇱%{T-} $ACTIVE_VPNS%{F-}"
+else
+    echo "%{T3}󰅟%{T-}"
+fi

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+modules=(
+    cpu
+    memory
+)
+
+COMMAND=$1
+
+case "$COMMAND" in
+--toggle)
+    for module in "${modules[@]}"; do
+        polybar-msg action "#$module.module_toggle" 2>/dev/null
+    done
+    ;;
+esac
+
+echo "%{T2}%{F#FFFFFF}%{F-}%{T-}"
