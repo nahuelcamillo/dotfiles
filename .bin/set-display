@@ -1,0 +1,66 @@
+#!/bin/bash
+
+PROFILE_LAPTOP="laptop";
+PROFILE_SINGLE="single";
+PROFILE_DUAL="dual";
+PROFILE_OFFICE="office";
+
+XRANDR_DISPLAY_PROFILE=$1
+
+killall -q polybar
+
+echo "Applying display profile: $XRANDR_DISPLAY_PROFILE"
+
+# Reload Xresources
+xrdb ~/.Xresources
+
+CURSOR_SIZE=8
+
+if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_LAPTOP" ]]; then
+    xrdb -merge ~/.Xresources.laptop
+
+    CURSOR_SIZE=48
+
+    # Xresources.DPI * 1024
+    echo "Xft/DPI 196608" > ~/.xsettingsd
+
+    bash ~/.screenlayout/laptop.sh
+fi
+
+if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_SINGLE" ]]; then
+    xrdb -merge ~/.Xresources.lg
+
+    # Xresources.DPI * 1024
+    echo "Xft/DPI 98304" > ~/.xsettingsd
+
+    bash ~/.screenlayout/lg_single.sh
+fi
+
+if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_DUAL" ]]; then
+    xrdb -merge ~/.Xresources.dual
+
+    # Xresources.DPI * 1024
+    echo "Xft/DPI 98304" > ~/.xsettingsd
+
+    bash ~/.screenlayout/dual.sh
+fi
+
+if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_OFFICE" ]]; then
+    xrdb -merge ~/.Xresources.office
+
+    # Xresources.DPI * 1024
+    echo "Xft/DPI 98304" > ~/.xsettingsd
+
+    bash ~/.screenlayout/office.sh
+fi
+
+SCREEN_RESOLUTION=$(~/bin/get-resolution)
+echo $SCREEN_RESOLUTION > /tmp/screen-resolution
+
+# killall -HUP xsettingsd # Kill xsettingsd to be restarted by the WM. Used to scale GTK apps when going 2K <=> 4K
+systemctl --user restart xsettingsd.service
+
+xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/left_ptr $CURSOR_SIZE
+
+# Restart the window manager
+$HOME/bin/wm -r
