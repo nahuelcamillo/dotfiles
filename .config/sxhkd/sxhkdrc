@@ -38,7 +38,7 @@ super + shift + a; a
 		alacritty
 
 super + shift + a; b
-		~/.local/share/JetBrains/Toolbox/apps/datagrip-2/bin/datagrip.sh
+		~/.local/share/JetBrains/Toolbox/apps/datagrip/bin/datagrip.sh
 
 super + shift + a; m
 		mailspring
@@ -54,4 +54,7 @@ super + shift + a; t
 
 super + shift + a; w
 		whatsapp-nativefier
+
+super + period
+		emoji-picker
 

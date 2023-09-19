@@ -51,11 +51,10 @@ alias resetant='antidote update'
 
 # Work Commands
 alias p="cd ~/Documents/Projects/"
-alias cheyenne="cd ~/Documents/Projects/Cheyenne"
+alias laramie="cd ~/Documents/Projects/Laramie"
 alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
-alias vpnl="sudo openvpn ~/.config/openvpn/profiles/pfsense-UDP4-1194-ncamillo.ovpn"
-alias kvpnl="sudo pkill openvpn"
+#alias kvpnl="sudo pkill openvpn"
 
 # Git Commands
 alias g="git"

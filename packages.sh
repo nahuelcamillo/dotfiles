@@ -76,6 +76,7 @@ PACKAGES=(
     vlc
     whatsapp-nativefier
     wmctrl
+    x11-emoji-picker
     xdotool
     xf86-input-libinput
     yarn
