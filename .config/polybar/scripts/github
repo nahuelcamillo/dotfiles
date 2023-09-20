@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITHUB_TOKEN=$($HOME/bin/reveal-secret github.notifications.token)
+GITHUB_TOKEN=$($HOME/.bin/reveal-secret github.notifications.token)
 
 notifications_count=$(curl -s -H "Authorization: Bearer ${GITHUB_TOKEN}" https://api.github.com/notifications | grep '"unread": true' | wc -l)
 
