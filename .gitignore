@@ -8,3 +8,9 @@
 .config/openvpn/profiles/pfsense-UDP4-1194-ncamillo-tls.key
 .config/openvpn/profiles/SRV-PFSENSE1-UDP4-1194-ca.crt
 .config/openvpn/profiles/SRV-PFSENSE1-UDP4-1194-tls.key
+.config/openvpn/profiles/ca.crt
+.config/openvpn/profiles/cert.crt
+.config/openvpn/profiles/config.conf
+.config/openvpn/profiles/key.key
+.config/openvpn/profiles/ta.key
+.config/.secrets
