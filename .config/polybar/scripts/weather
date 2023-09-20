@@ -6,5 +6,5 @@ WEATHER=$(curl -s "wttr.in/?format=1");
 if [[ "$WEATHER" =~ "Unknown" || "$WEATHER" =~ "Sorry" ]]; then 
     echo "🌪️"
 else 
-    echo $WEATHER; 
+    echo $WEATHER;
 fi

@@ -3,6 +3,7 @@
 modules=(
     cpu
     memory
+    bandwidth
 )
 
 COMMAND=$1
