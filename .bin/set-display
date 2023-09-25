@@ -22,7 +22,7 @@ if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_LAPTOP" ]]; then
     CURSOR_SIZE=48
 
     # Xresources.DPI * 1024
-    echo "Xft/DPI 196608" > ~/.xsettingsd
+    echo "Xft/DPI 98304" > ~/.xsettingsd
 
     bash ~/.screenlayout/laptop.sh
 fi
@@ -31,7 +31,7 @@ if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_SINGLE" ]]; then
     xrdb -merge ~/.Xresources.lg
 
     # Xresources.DPI * 1024
-    echo "Xft/DPI 98304" > ~/.xsettingsd
+    echo "Xft/DPI 196608" > ~/.xsettingsd
 
     bash ~/.screenlayout/lg_single.sh
 fi
@@ -54,7 +54,7 @@ if [[ "$XRANDR_DISPLAY_PROFILE" == "$PROFILE_OFFICE" ]]; then
     bash ~/.screenlayout/office.sh
 fi
 
-SCREEN_RESOLUTION=$(~/bin/get-resolution)
+SCREEN_RESOLUTION=$(~/.bin/get-resolution)
 echo $SCREEN_RESOLUTION > /tmp/screen-resolution
 
 # killall -HUP xsettingsd # Kill xsettingsd to be restarted by the WM. Used to scale GTK apps when going 2K <=> 4K
