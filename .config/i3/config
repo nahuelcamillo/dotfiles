@@ -98,14 +98,8 @@ bindsym $mod+0 workspace 10
 
 ################# menu's in arcolinux
 
-# start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-
 # start rofi
 bindsym $mod+d exec --no-startup-id ~/.config/i3/launcher/launcher.sh
-
-# start xfce4-appfinder
-bindsym mod1+F2 exec --no-startup-id xfce4-appfinder --collapsed
 
 # start xfce-appfinder
 bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
@@ -220,6 +214,17 @@ bindsym $mod+a focus parent
 #
 bindsym Control+Mod1+Left move workspace to output left
 bindsym Control+Mod1+Right move workspace to output right
+
+#
+# Scratchpad
+#
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+# Toggle specific scratchpad window, if any.
+# bindsym $super+Shift+v exec --no-startup-id i3-msg '[class="(?i)thunderbird"] scratchpad show'
+
 
 ################# Resizing
 

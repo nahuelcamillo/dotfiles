@@ -12,7 +12,7 @@ xfce4-power-manager &
 # Apps
 1password --silent &
 $HOME/.bin/exterminate nm-applet; nm-applet &
-$HOME/.bin/exterminate blueberry; blueberry &
+#$HOME/.bin/exterminate blueberry; blueberry &
 $HOME/.bin/exterminate copyq; copyq &
 $HOME/.bin/exterminate fusuma; fusuma &
 $HOME/.bin/exterminate dunst; dunst &
