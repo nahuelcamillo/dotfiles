@@ -1,5 +1,10 @@
 .cfg
 .dotfiles
+
+# Used to scale GTK apps
+home/.xsettingsd
+
+# Secrets
 .gitsecret/keys/random_seed
 !*.secret
 .config/openvpn/profiles/SRV-PFSENSE1-movistar.ovpn

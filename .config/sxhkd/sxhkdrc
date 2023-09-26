@@ -58,3 +58,17 @@ super + shift + a; w
 super + period
 		emoji-picker
 
+#
+# Set Display
+#
+
+super + shift + d; a
+		~/.bin/set-display dual
+super + shift + d; s
+		~/.bin/set-display single
+super + shift + d; d
+		~/.bin/set-display dual
+super + shift + d; l
+		~/.bin/set-display laptop
+super + shift + d; i
+		xcalib -a -i

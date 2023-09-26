@@ -63,4 +63,4 @@ systemctl --user restart xsettingsd.service
 xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/left_ptr $CURSOR_SIZE
 
 # Restart the window manager
-$HOME/bin/wm -r
+$HOME/.bin/wm -r
