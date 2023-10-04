@@ -329,11 +329,6 @@ exec --no-startup-id volumeicon
 # feh sets wallpaper
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-# for other Arch Linux based distros
-# exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
-
-# Polybar
-# exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 ################# applications keyboard shortcuts  
 
@@ -345,17 +340,12 @@ bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
 bindsym control+mod1+t exec --no-startup-id alacritty; focus
 bindsym control+mod1+Return exec --no-startup-id alacritty; focus
 bindsym control+mod1+KP_Enter exec --no-startup-id alacritty; focus
-bindsym F12 exec --no-startup-id xfce4-terminal --drop-down; focus
 
 # System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 
 # settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
-
-# archlinux-logout
-bindsym control+mod1+k exec --no-startup-id archlinux-logout
-bindsym control+mod1+l exec --no-startup-id archlinux-logout
 
 # rofi theme selector
 bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
@@ -564,52 +554,8 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
-################# bar appearance                   
-
-# bar {
-#     height 25
-#     workspace_buttons yes
-# 	font pango:Noto Sans 12
-# 	# position top
-#     position bottom
-
-# 	# system icons
-#     # tray_output none
-#     # tray_output $firstMonitor
-#     # tray_output $secondMonitor
-
-#     # OPTION 1 : i3status
-
-#     # type status_command i3status without the config file and
-#     # you will get the standard i3status bar
-#     # Second one is the standard statusbar with my personal settings
-
-# 	# status_command i3status
-#     status_command i3status -c ~/.config/i3/i3status.conf
-
-#     ##START THEMING BAR
-#     # Theme name : ArcoLinux Default
-
-#     # i3 bar colors
-#     # variable border background Text
-
-#     colors {
-#         background #2F2F2F
-#         statusline #eeeeee
-#         separator  #666666
-
-#         # colorclass           border  backgr. text
-#         focused_workspace     #a9a9a9 #5f676a #eeeeee
-#         active_workspace      #a9a9a9 #5f676a #eeeeee
-#         inactive_workspace    #a9a9a9 #222222 #a9a9a9
-#         urgent_workspace      #a9a9a9 #d42121 #FFFFFF
-#         }
-
-# }
-    ##STOP THEMING BAR
-
-    ##START THEMING WM
-    # Theme name : ArcoLinux Default
+##START THEMING WM
+# Theme name : ArcoLinux Default
 
     # Window color settings
     # class                 border  backgr. text    indicator
@@ -702,7 +648,7 @@ mode "i3-command" {
         bindsym s layout toggle split; mode "default"
         bindsym q exec --no-startup-id "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"; mode "default"
         bindsym r restart
-        bindsym l exec --no-startup-id $HOME/bin/lock-screen --force; mode "default"
+        bindsym l exec --no-startup-id $HOME/.bin/lock-screen --force; mode "default"
 
         bindsym Escape mode "default"
         bindsym Return mode "default"
