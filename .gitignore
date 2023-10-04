@@ -2,7 +2,7 @@
 .dotfiles
 
 # Used to scale GTK apps
-home/.xsettingsd
+~/.xsettingsd
 
 # Secrets
 .gitsecret/keys/random_seed
