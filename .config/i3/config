@@ -341,9 +341,6 @@ bindsym control+mod1+t exec --no-startup-id alacritty; focus
 bindsym control+mod1+Return exec --no-startup-id alacritty; focus
 bindsym control+mod1+KP_Enter exec --no-startup-id alacritty; focus
 
-# System monitor
-bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
-
 # settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 
@@ -460,11 +457,6 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
-
-################# bar toggle                       
-
-# bar toggle, hide or show
-bindsym $mod+b bar mode toggle
 
 ################# border control                   
 
