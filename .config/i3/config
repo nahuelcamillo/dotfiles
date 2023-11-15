@@ -429,10 +429,6 @@ bindsym mod1+n exec --no-startup-id variety -n
 bindsym mod1+p exec --no-startup-id variety -p
 # favorite wallpaper
 bindsym mod1+f exec --no-startup-id variety -f
-# pause wallpaper
-bindsym mod1+Up exec --no-startup-id variety --pause
-# resume wallpaper
-bindsym mod1+Down exec --no-startup-id variety --resume
 
 ################# variety with pywal for your wallpapers/colour schemes
 
