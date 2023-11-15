@@ -72,6 +72,12 @@ alias cad="cfg add"
 alias cci="cfg commit -m"
 alias cpl="cfg pull"
 
+# append dotnet
+path+=('~/.dotnet/tools')
+# export to sub-processes (make it inherited by child processes)
+export PATH
+
+
 # Default configuration obtained from ArcoLinux .zshrc
 
 # Make nano the default editor

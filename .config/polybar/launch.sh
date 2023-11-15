@@ -15,7 +15,7 @@ polybar --reload laptop 2>&1 | tee -a /tmp/polybar-laptop.log & disown
 #     polybar --reload virtual 2>&1 | tee -a /tmp/polybar-virtual.log & disown
 # else
 #     # Launch polybar
-#     K2_MONITORS=`xrandr --listmonitors | grep x1440 | wc -l`
+#     K2_MONITORS=`xrandr --listmonitors | grep x768 | wc -l`
 #     K4_MONITORS=`xrandr --listmonitors | grep x2160 | wc -l`
 
 #     if [[ "$K2_MONITORS" != "0" ]]; then
@@ -29,7 +29,7 @@ polybar --reload laptop 2>&1 | tee -a /tmp/polybar-laptop.log & disown
 #                 tray_pos="right"
 #             fi
 
-#             MONITOR=$mon TRAY_POS=$tray_pos polybar --reload asus 2>&1 | tee -a /tmp/polybar-monitor-"$mon".log & disown
+#             MONITOR=$mon TRAY_POS=$tray_pos polybar --reload dual 2>&1 | tee -a /tmp/polybar-monitor-"$mon".log & disown
 #         done
 
 #     else
