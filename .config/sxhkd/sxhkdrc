@@ -22,37 +22,37 @@ super + shift + 5
 # Open/Init applications
 #
 
-super + shift + a; f
+super + shift + o; f
 		firefox
 
-super + shift + a; d
+super + shift + o; d
 		firefox-developer-edition
 
-super + shift + a; g
+super + shift + o; g
 		google-chrome-stable
 
-super + shift + a; v
+super + shift + o; v
 		code
 
-super + shift + a; a
+super + shift + o; a
 		alacritty
 
-super + shift + a; b
+super + shift + o; b
 		~/.local/share/JetBrains/Toolbox/apps/datagrip/bin/datagrip.sh
 
-super + shift + a; m
+super + shift + o; m
 		mailspring
 
-super + shift + a; n
+super + shift + o; n
 		notion-app
 
-super + shift + a; s
+super + shift + o; s
 		spotify
 
-super + shift + a; t
+super + shift + o; t
 		telegram-desktop
 
-super + shift + a; w
+super + shift + o; w
 		whatsapp-nativefier
 
 super + period
@@ -75,3 +75,20 @@ super + shift + d; l
 		~/.bin/set-display laptop
 super + shift + d; i
 		xcalib -a -i
+
+
+############################################
+# - 1C:E6:1D:C9:31:A0   # Galaxy Buds Pro #
+############################################
+#
+# Audio
+super + shift + a; c
+		~/.bin/headsets connect '1C:E6:1D:C9:31:A0'
+super + shift + a; d
+		~/.bin/headsets disconnect '1C:E6:1D:C9:31:A0'
+super + shift + a; s
+		~/.bin/headsets speaker '1C:E6:1D:C9:31:A0'
+super + shift + a; h
+		~/.bin/headsets headset '1C:E6:1D:C9:31:A0'
+super + shift + a; r
+		~/.bin/restart-audio
