@@ -16,7 +16,8 @@ PACKAGES=(
     ebtables
     emojify
     feh
-    firefox
+    filelight
+	firefox
     firefox-developer-edition
     flameshot
     forgit
