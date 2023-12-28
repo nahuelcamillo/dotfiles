@@ -8,9 +8,6 @@
 #
 
 # https://github.com/rajasegar/alacritty-themes/tree/master/themes
-import:
-  - ~/.config/alacritty/themes/One-Dark.yml
-
 env:
   TERM: xterm-256color
 
