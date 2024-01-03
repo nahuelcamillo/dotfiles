@@ -19,7 +19,7 @@ PACKAGES=(
     filelight
 	firefox
     firefox-developer-edition
-    flameshot
+    #flameshot
     forgit
     freerdp
     fzf
@@ -59,6 +59,7 @@ PACKAGES=(
     rofi
     ruby-fusuma
     skippy-xd
+	spectacle
     spotify
     starship
     steam
