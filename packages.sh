@@ -5,6 +5,7 @@ PACKAGES=(
     1password-cli
     alacritty
     antidote
+	bar-gmail #polybar module
     base-devel
     bat
     bridge-utils
