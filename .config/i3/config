@@ -216,6 +216,11 @@ bindsym Control+Mod1+Left move workspace to output left
 bindsym Control+Mod1+Right move workspace to output right
 
 #
+# Show desktop moving to a unused workspace
+#
+bindsym $super+d exec --no-startup-id ~/.config/i3/scripts/show-desktop.sh
+
+#
 # Scratchpad
 #
 # Make the currently focused window a scratchpad
