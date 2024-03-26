@@ -14,24 +14,21 @@ PACKAGES=(
     dnsmasq
     docker
     docker-compose
-    ebtables
     emojify
     feh
     filelight
 	firefox
     firefox-developer-edition
-    #flameshot
+    flameshot
     forgit
     freerdp
     fzf
-    galaxybudsclient-bin 
+	galculator
     git-secret
-    gitmoji
-    google-cloud-sdk
-    i3
-    i3blocks
-    i3lock
-    i3status
+	i3
+	i3blocks
+	i3lock
+	i3status
     jetbrains-toolbox
     jitsi-meet-desktop-bin
     jq
@@ -41,26 +38,39 @@ PACKAGES=(
     libreoffice-fresh
     libvirt
     lsd
-    nerd-fonts-meta
+	mongodb-bin
+	mongodb-compass
+	mongodb-tools
+	mongosh-bin
+    nerd-fonts-source-code-pro
     net-tools
     network-manager-applet
     networkmanager
     networkmanager-openvpn
-    nodejs-gitmoji-cli
+    nitrogen
+	nodejs-gitmoji-cli
     notion-app
+	obs-studio
     okular
     openbsd-netcat
+	openfortivpn
     openresolv
     openssh
+	pavucontrol
     peek
-    postman-bin
+	pipewire-audio
+    pipewire-pulse
+	postgresql
+	postman-bin
+	pulseaudio-control
     qemu
     ranger
     remmina
     rofi
+	rofi-calc
     ruby-fusuma
-    skippy-xd
-	spectacle
+	slack-desktop
+	#spectacle #Trying Flameshot again
     spotify
     starship
     steam
@@ -84,7 +94,6 @@ PACKAGES=(
     xf86-input-libinput
     yarn
     yay
-    youtube-dl
     yq
     zgen
     zoom
