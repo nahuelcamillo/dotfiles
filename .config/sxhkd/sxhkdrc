@@ -10,12 +10,12 @@ super + alt + s;
 #
 
 super + shift + 3
-    spectacle -m
-	#flameshot full
+	flameshot full
+	#spectacle -m
 
 super + shift + 4
-    spectacle -r
-	#flameshot gui
+	flameshot gui
+    #spectacle -r
 
 super + shift + 5
     peek
