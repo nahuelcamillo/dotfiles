@@ -99,7 +99,7 @@ bindsym $mod+0 workspace 10
 ################# menu's in arcolinux
 
 # start rofi
-bindsym $mod+d exec --no-startup-id ~/.config/i3/launcher/launcher.sh
+bindsym $mod+space exec --no-startup-id ~/.config/i3/launcher/launcher.sh
 
 # start xfce-appfinder
 bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
@@ -201,7 +201,7 @@ bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Mod1+f focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -221,8 +221,9 @@ bindsym Control+Mod1+Right move workspace to output right
 bindsym $super+d exec --no-startup-id ~/.config/i3/scripts/show-desktop.sh
 
 #
-# Scratchpad
+################# Scratchpad
 #
+
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
@@ -342,9 +343,6 @@ exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpap
 # Start a terminal emulator
 bindsym $mod+Return exec --no-startup-id alacritty;focus
 bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
-bindsym control+mod1+t exec --no-startup-id alacritty; focus
-bindsym control+mod1+Return exec --no-startup-id alacritty; focus
-bindsym control+mod1+KP_Enter exec --no-startup-id alacritty; focus
 
 # settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
@@ -360,10 +358,7 @@ bindsym --release $mod+Escape exec xkill
 
 # file management
 for_window [class="Thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
 bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
 
 ################# floating or tiled rules         
 
