@@ -63,6 +63,9 @@ super + period
 super + shift + t
 		xfce4-taskmanager
 
+super + shift + o; c
+		galculator
+
 #
 # Set Display
 #
