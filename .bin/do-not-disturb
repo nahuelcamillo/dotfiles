@@ -17,12 +17,12 @@ APPS=(
 
 if [ "$MODE" == "on" ]; then
     MODE="mute"
-    dunstctl set-paused true 2>/dev/null
+    xfconf-query -c xfce4-notifyd -p /do-not-disturb -s true 2>/dev/null
 else
     MODE="unmute"
-    dunstctl set-paused false 2>/dev/null
+    xfconf-query -c xfce4-notifyd -p /do-not-disturb -s false 2>/dev/null
 fi
 
-for APP in "${APPS[@]}"; do
-    $HOME/bin/toggle-app-audio $APP $MODE
-done
+#for APP in "${APPS[@]}"; do
+#    $HOME/bin/toggle-app-audio $APP $MODE
+#done
