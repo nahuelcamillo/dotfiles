@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
-WEATHER=$(curl -s "wttr.in/?format=1"); 
+RANDOM_NUMBER=$(shuf -i 1-999999 -n 1);
+WEATHER=$(curl -s "wttr.in/?format=1&random=$RANDOM_NUMBER"); 
 
 if [[ "$WEATHER" =~ "Unknown" || "$WEATHER" =~ "Sorry" ]]; then 
     echo "🌪️"
