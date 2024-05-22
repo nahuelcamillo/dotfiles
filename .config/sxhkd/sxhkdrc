@@ -37,7 +37,7 @@ super + shift + o; v
 		code
 
 super + shift + o; a
-		alacritty
+		firefox --new-tab "https://chatgpt.com/"
 
 super + shift + o; b
 		~/.local/share/JetBrains/Toolbox/apps/datagrip/bin/datagrip.sh
@@ -81,12 +81,14 @@ super + shift + d; l
 super + shift + d; i
 		xcalib -a -i
 
+#
+# Audio
+#
 
 ############################################
 # - 1C:E6:1D:C9:31:A0   # Galaxy Buds Pro #
 ############################################
-#
-# Audio
+
 super + shift + a; c
 		~/.bin/headsets connect '1C:E6:1D:C9:31:A0'
 super + shift + a; d
