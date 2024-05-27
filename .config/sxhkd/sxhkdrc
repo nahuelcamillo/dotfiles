@@ -28,7 +28,7 @@ super + shift + o; f
 		firefox
 
 super + shift + o; d
-		firefox-developer-edition
+		discord
 
 super + shift + o; g
 		google-chrome-stable
@@ -99,3 +99,11 @@ super + shift + a; h
 		~/.bin/headsets headset '1C:E6:1D:C9:31:A0'
 super + shift + a; r
 		~/.bin/restart-audio
+
+
+#
+# VPN
+#
+
+alt + shift + v; c
+		alacritty --class i3FloatingWindow -e ~/.bin/vpn_connect
