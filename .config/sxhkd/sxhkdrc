@@ -66,6 +66,9 @@ super + shift + t
 super + shift + o; c
 		galculator
 
+super + shift + o; r
+		remmina
+
 #
 # Set Display
 #
