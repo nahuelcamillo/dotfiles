@@ -55,6 +55,8 @@ alias laramie="cd ~/Documents/Projects/Laramie"
 alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 #alias kvpnl="sudo pkill openvpn"
+alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d"
+alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 
 # Git Commands
 alias g="git"
