@@ -52,10 +52,10 @@ alias resetant='antidote update'
 # Work Commands
 alias p="cd ~/Documents/Projects/"
 alias laramie="cd ~/Documents/Projects/Laramie"
-alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
+alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d && laramie"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 #alias kvpnl="sudo pkill openvpn"
-alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d"
+alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d && laramie"
 alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 
 # Git Commands
