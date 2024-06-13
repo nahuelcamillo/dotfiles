@@ -69,6 +69,9 @@ super + shift + o; c
 super + shift + o; r
 		remmina
 
+super + shift + o; k
+		slack
+
 #
 # Set Display
 #
