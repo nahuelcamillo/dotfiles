@@ -58,6 +58,8 @@ alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d && laramie"
 alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 
+alias init-laramie="dbsup && rabbitup && ./run_laramie.sh"
+
 # Git Commands
 alias g="git"
 alias st="git status"
