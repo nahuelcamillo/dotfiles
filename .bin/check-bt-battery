@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Function to get the battery percentage of a Bluetooth device using bluetoothctl
+get_battery_percentage() {
+    device_mac=$1
+    battery_info=$(bluetoothctl info "$device_mac" | grep "Battery Percentage" | awk -F ": " '{print $2}')
+    # Extract only the decimal part (the percentage value in parentheses)
+    battery_percentage=$(echo $battery_info | grep -oP '(?<=\().*(?=\))')
+    echo $battery_percentage
+}
+
+# Check if bluetoothctl is installed
+if ! command -v bluetoothctl &> /dev/null
+then
+    echo "bluetoothctl is not installed. Please install it to use this script."
+    exit 1
+fi
+
+echo "Connected Bluetooth devices and their battery percentage:"
+
+# Get the list of paired Bluetooth devices
+paired_devices=$(bluetoothctl devices Paired | awk '{print $2}')
+
+# Iterate over each paired device and check if it's connected
+for device in $paired_devices
+do
+    # Check if the device is connected
+    connected=$(bluetoothctl info "$device" | grep "Connected: yes")
+    if [ -n "$connected" ]; then
+        device_alias=$(bluetoothctl info "$device" | grep "Alias" | awk -F ": " '{print $2}')
+        battery_percentage=$(get_battery_percentage "$device")
+        if [ -n "$battery_percentage" ]; then
+            echo "$device_alias ($device): $battery_percentage%"
+        else
+            echo "$device_alias ($device): Could not get battery percentage."
+        fi
+    fi
+done
