@@ -3,8 +3,27 @@
 MUTED_COLOR="#FF6961"
 UNMUTED_COLOR="#8BC34A"
 
-DEVICE_ICON=$(pulseaudio-control --node-type input --node-nicknames-from "device.description" --node-nickname "*HD_Pro_Webcam*:󰖠" --node-nickname "*CalDigit*:CalDigit" --node-nickname "*HiFi__hw_sof*:" --node-nickname "*bluez*:󰋋" --node-nickname "*analog*:" --node-blacklist "*.monitor" --format '${NODE_NICKNAME}' output | sed -E 's/%\{F#[0-9a-fA-F]{6}\}([^%]*)%\{F-\}/\1/g')
-MUTED="$(pactl list short sources | awk '/input.*RUNNING/ {system("pactl get-source-mute " $1)}' | sed 's/Mute: //g' | uniq)"
+RUNNING_DEVICE=$(pactl list short sources |  grep 'RUNNING' | awk '{print $2}')
+DEFAULT_DEVICE_NAME=$(pactl get-default-source)
+MUTED=$(pactl get-source-mute $DEFAULT_DEVICE_NAME | sed 's/Mute: //g' | uniq)
+
+if [[ $RUNNING_DEVICE =~ 'HD_Pro_Webcam' ]]; then
+    DEVICE_ICON="󰖠"
+elif [[ $RUNNING_DEVICE =~ 'CalDigit' ]]; then
+    DEVICE_ICON="󱂩"
+elif [[ $RUNNING_DEVICE =~ 'Headset' ]]; then
+    DEVICE_ICON="󰋋"
+elif [[ $RUNNING_DEVICE =~ 'HiFi' ]]; then
+    DEVICE_ICON=""
+elif [[ $RUNNING_DEVICE =~ 'bluez' ]]; then
+    DEVICE_ICON="󰋋"
+elif [[ $RUNNING_DEVICE =~ 'analog' ]]; then
+    DEVICE_ICON=""
+elif [[ $RUNNING_DEVICE =~ 'Mic1' ]]; then
+    DEVICE_ICON=""
+elif [[ $RUNNING_DEVICE =~ 'USB_Audio' ]]; then
+    DEVICE_ICON="󰓃"
+fi
 
 if [[ $MUTED == "no" ]]; then
     echo "%{F${UNMUTED_COLOR}}$DEVICE_ICON%{F-}"

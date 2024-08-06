@@ -14,20 +14,22 @@ display_audio_info() {
     VOL=$(get_volume)
     MUTE=$(get_mute_status)
 
-    RUNNING_DEVICE=$(pactl list short sources | awk '/RUNNING/ {print $2}')
+    RUNNING_DEVICE=$(pactl list short sinks | grep 'RUNNING' | awk '{print $2}')
 
-    if [[ $RUNNING_DEVICE =~ "HD_Pro_Webcam" ]]; then
+    if [[ $RUNNING_DEVICE =~ HD_Pro_Webcam ]]; then
         DEVICE_ICON="󰖠"
-    elif [[ $RUNNING_DEVICE =~ "CalDigit" ]]; then
+    elif [[ $RUNNING_DEVICE =~ CalDigit ]]; then
         DEVICE_ICON="󱂩"
-    elif [[ $RUNNING_DEVICE =~ "HiFi__hw_sof" ]]; then
-        DEVICE_ICON=""
-    elif [[ $RUNNING_DEVICE =~ "bluez" ]]; then
+    elif [[ $RUNNING_DEVICE =~ Headphone ]]; then
+         DEVICE_ICON="󰋋"
+    elif [[ $RUNNING_DEVICE =~ bluez ]]; then
         DEVICE_ICON="󰋋"
-    elif [[ $RUNNING_DEVICE =~ "analog" ]]; then
+    elif [[ $RUNNING_DEVICE =~ analog ]]; then
         DEVICE_ICON=""
-    elif [[ $RUNNING_DEVICE =~ "USB_Audio" ]]; then
+    elif [[ $RUNNING_DEVICE =~ USB_Audio ]]; then
         DEVICE_ICON="󰓃"
+    elif [[ $RUNNING_DEVICE =~ HiFi ]]; then
+        DEVICE_ICON=""
     fi
 
     if [[ $MUTE == "yes" ]]; then
@@ -36,7 +38,7 @@ display_audio_info() {
         COLOR=""
     fi
 
-    echo "$COLOR$DEVICE_ICON $VOL%{F-}"
+    echo "$COLOR$DEVICE_ICON  $VOL%{F-}"
 }
 
 toggle_mute() {
