@@ -5,6 +5,7 @@ PACKAGES=(
     1password-cli
     alacritty
     antidote
+	atool
 	bar-gmail #polybar module
     base-devel
     bat
@@ -33,6 +34,8 @@ PACKAGES=(
     jitsi-meet-desktop-bin
     jq
     kate
+	lazydocker
+	lazygit
     libguestfs
     libinput-gestures
     libreoffice-fresh
@@ -62,7 +65,6 @@ PACKAGES=(
     pipewire-pulse
 	postgresql
 	postman-bin
-	pulseaudio-control
     qemu
     ranger
     remmina
