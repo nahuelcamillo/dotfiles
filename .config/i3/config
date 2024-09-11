@@ -348,7 +348,7 @@ bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 
 # rofi theme selector
-bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
+# bindsym control+mod1+r exec --no-startup-id rofi-theme-selector
 
 # pavucontrol
 bindsym control+mod1+u exec --no-startup-id pavucontrol
