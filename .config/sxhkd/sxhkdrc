@@ -113,3 +113,10 @@ super + shift + a; r
 
 alt + shift + v; c
 		alacritty --class i3FloatingWindow -e ~/.bin/vpn_connect
+
+#
+# Scripts
+# 
+
+alt + shift + s; b
+		alacritty --class i3FloatingWindow --hold -e ~/.bin/check-bt-battery
