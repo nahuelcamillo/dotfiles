@@ -52,10 +52,10 @@ alias resetant='antidote update'
 # Work Commands
 alias p="cd ~/Documents/Projects/"
 alias laramie="cd ~/Documents/Projects/Laramie"
-alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d && laramie"
+alias rabbitup="cd ~/Documents/Projects/Laramie/devops/docker/rabbitmq && docker-compose up -d"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 #alias kvpnl="sudo pkill openvpn"
-alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d && laramie"
+alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d"
 alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 
 alias init-laramie="dbsup && rabbitup && ./run_laramie.sh"
@@ -68,7 +68,9 @@ alias ci="git commit"
 alias co="git checkout"
 alias gc="git clone"
 alias gpl="git pull"
+
 # Dotfiles
+
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias cst="cfg status"
