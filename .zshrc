@@ -58,7 +58,10 @@ alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d"
 alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 
-alias init-laramie="dbsup && rabbitup && ./run_laramie.sh"
+alias init-laramie="dbsup && rabbitup && laramie && ./run_laramie.sh"
+
+alias laramie-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/nubi.pem debian@10.196.33.178"
+alias cheyenne-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/daten-server-02.pem debian@10.196.33.180"
 
 # Git Commands
 alias g="git"
