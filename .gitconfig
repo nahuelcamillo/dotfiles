@@ -213,7 +213,6 @@
 	email = nahuel.camillo@gmail.com
 	name = Nahuel Camillo
 	signingkey = ~/.ssh/id_rsa.pub
-	#signingkey = DC852A3A0F5B46B1!
 
 [init]
 
