@@ -179,7 +179,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgSign = true
+	gpgsign = true
 
 [diff]
 
@@ -213,6 +213,7 @@
 	email = nahuel.camillo@gmail.com
 	name = Nahuel Camillo
 	signingkey = ~/.ssh/id_rsa.pub
+	#signingkey = DC852A3A0F5B46B1!
 
 [init]
 
@@ -253,6 +254,7 @@
 [tag]
 
 	forceSignAnnotated = false
+	gpgSign = true
 
 [fixup]
 
