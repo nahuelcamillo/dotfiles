@@ -11,6 +11,7 @@ PACKAGES=(
     bat
     bridge-utils
     copyq
+	cursor
     discord
     dnsmasq
     docker
