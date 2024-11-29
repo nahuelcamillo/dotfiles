@@ -6,13 +6,11 @@ PACKAGES=(
     alacritty
     antidote
 	atool
-	bar-gmail #polybar module
     base-devel
     bat
     bridge-utils
     copyq
 	cursor
-    discord
     dnsmasq
     docker
     docker-compose
