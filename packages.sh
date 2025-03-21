@@ -53,6 +53,7 @@ PACKAGES=(
 	nodejs-gitmoji-cli
     notion-app
 	obs-studio
+	obsidian
     okular
     openbsd-netcat
 	openfortivpn
@@ -64,6 +65,7 @@ PACKAGES=(
     pipewire-pulse
 	postgresql
 	postman-bin
+	putty
     qemu
     ranger
     remmina
@@ -76,6 +78,7 @@ PACKAGES=(
     starship
     steam
     sxhkd
+	teams
     telegram-desktop
     thefuck
     timeshift
