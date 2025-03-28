@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zoom (escalado)
+Comment=Zoom video conferencing
+Exec=/home/ncamillo/.local/bin/zoom %U
+Icon=Zoom
+Terminal=false
+Type=Application
+Categories=Network;Application;
+StartupWMClass=zoom
+
