@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SCALE_CONF="$HOME/.config/display/zoom-scale.conf"
+SCALE_FACTOR="1"
+
+if [ -f "$SCALE_CONF" ]; then
+    SCALE_FACTOR=$(grep -Eo '[0-9.]+' "$SCALE_CONF" | head -n 1)
+fi
+
+# Detectar si se lanzó desde GUI (sin TTY asociado)
+if [ -t 1 ]; then
+  # Terminal o sxhkd: entorno limpio
+  exec env -i \
+    DISPLAY="$DISPLAY" \
+    XAUTHORITY="$XAUTHORITY" \
+    HOME="$HOME" \
+    QT_SCALE_FACTOR="$SCALE_FACTOR" \
+    QT_AUTO_SCREEN_SCALE_FACTOR=0 \
+    /usr/bin/zoom "$@"
+else
+  # GUI launcher: usar entorno heredado
+  exec env \
+    QT_SCALE_FACTOR="$SCALE_FACTOR" \
+    QT_AUTO_SCREEN_SCALE_FACTOR=0 \
+    /usr/bin/zoom "$@"
+fi

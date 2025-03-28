@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Ruta del archivo de configuración
+SCALE_CONF="$HOME/.config/display/code-scale.conf"
+
+# Valor por defecto si no existe el archivo
+SCALE_FACTOR="1"
+
+# Leer el valor si el archivo existe
+if [ -f "$SCALE_CONF" ]; then
+    SCALE_FACTOR=$(cat "$SCALE_CONF" | grep -Eo '[0-9.]+')
+fi
+
+# Cerrar VS Code si ya estaba abierto (opcional)
+# pkill -f /usr/bin/code
+
+# Ejecutar VS Code con el escalado forzado
+exec /usr/bin/code --force-device-scale-factor="$SCALE_FACTOR" "$@"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCALE_CONF="$HOME/.config/display/obsidian-scale.conf"
+SCALE="1.7"
+
+if [ -f "$SCALE_CONF" ]; then
+    SCALE=$(grep -Eo '[0-9.]+' "$SCALE_CONF" | head -n 1)
+fi
+
+exec /usr/bin/obsidian --force-device-scale-factor="$SCALE" "$@"

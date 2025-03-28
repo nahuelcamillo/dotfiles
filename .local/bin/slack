@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCALE_CONF="$HOME/.config/display/slack-scale.conf"
+SCALE_FACTOR="1"
+
+if [ -f "$SCALE_CONF" ]; then
+    SCALE_FACTOR=$(grep -Eo '[0-9.]+' "$SCALE_CONF" | head -n 1)
+fi
+
+exec /usr/bin/slack --force-device-scale-factor="$SCALE_FACTOR" "$@"
