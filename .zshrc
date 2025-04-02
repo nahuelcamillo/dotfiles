@@ -61,7 +61,8 @@ alias dbsdown="cd ~/Documents/Projects/Laramie/dbs && docker-compose down"
 alias init-laramie="dbsup && rabbitup && laramie && ./run_laramie.sh"
 
 alias laramie-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/nubi.pem debian@10.196.33.178"
-alias cheyenne-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/daten-server-02.pem debian@10.196.33.180"
+alias cheyenne-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/daten-server-02.pem debian@10.196.33.176"
+alias campana-ssh="ssh -i ~/Documents/VPN\ Connections/NUBI/daten-server-03.pem debian@10.196.33.177"
 
 # Git Commands
 alias g="git"
@@ -85,6 +86,9 @@ alias cpl="cfg pull"
 path+=('~/.dotnet/tools')
 # export to sub-processes (make it inherited by child processes)
 export PATH
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
+
 
 
 # Default configuration obtained from ArcoLinux .zshrc
