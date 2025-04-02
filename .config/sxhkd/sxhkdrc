@@ -24,6 +24,9 @@ super + shift + 5
 # Open/Init applications
 #
 
+super + shift + o; 1
+		1password
+
 super + shift + o; f
 		firefox
 
@@ -55,7 +58,7 @@ super + shift + o; t
 		telegram-desktop
 
 super + shift + o; w
-		whatsapp-nativefier
+		whatsapp
 
 super + period
 		emoji-picker
@@ -71,6 +74,9 @@ super + shift + o; r
 
 super + shift + o; k
 		slack
+
+super + shift + o; o
+		obsidian
 
 #
 # Set Display
