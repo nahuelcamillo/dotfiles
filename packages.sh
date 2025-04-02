@@ -4,27 +4,35 @@
 PACMAN_PACKAGES=(
     alacritty
     atool
+	arc-gtk-theme
     base-devel
     bat
-    bridge-utils
+    bpytop
+	bridge-utils
     copyq
     curl
     dnsmasq
     docker
     docker-compose
+	dunst
+	expect
     feh
     filelight
     firefox
     firefox-developer-edition
     flameshot
+	fprintd
     freerdp
+	fwupd
     fzf
     galculator
     git
+	git-delta
     htop
     i3blocks
     i3lock
     i3status
+	iotops
     jq
     kate
     lazygit
@@ -52,11 +60,13 @@ PACMAN_PACKAGES=(
     pipewire-pulse
     postgresql
     putty
+	qt5ct
     ranger
     remmina
     rofi
     rofi-calc
-    slack-desktop
+    seahorse
+	slack-desktop
     spotify
     starship
     steam
@@ -99,6 +109,7 @@ AUR_PACKAGES=(
     i3
     jetbrains-toolbox
     lazydocker
+	libfprint-2-tod1-synatudor-git
     libinput-gestures
     mongodb-bin
     mongodb-compass
