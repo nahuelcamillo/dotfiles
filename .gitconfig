@@ -212,7 +212,7 @@
 
 	email = nahuel.camillo@gmail.com
 	name = Nahuel Camillo
-	signingkey = ~/.ssh/id_rsa.pub
+	signingkey = /home/ncamillo/.ssh/id_rsa.pub
 
 [init]
 
@@ -247,7 +247,7 @@
 
 [gpg]
 
-	program = gpg
+	program = gpg1
 	format = ssh
 
 [tag]
@@ -302,3 +302,5 @@
     line-numbers-right-style = cyan
     line-numbers-minus-style = 124
     line-numbers-plus-style = 28
+[gpg "ssh"]
+	allowedSignersFile = /home/ncamillo/.config/git/allowed_signers
