@@ -1,23 +1,60 @@
 #!/bin/bash
 
+STATE_FILE="$HOME/.cache/xfce4-dnd.state"
 ACTIVE_COLOR="#E0B42F"
 INACTIVE_COLOR="#858585"
 
-case "$1" in
---toggle)
-    muted=$(xfconf-query -c xfce4-notifyd -p /do-not-disturb 2>/dev/null)
-    if [[ $muted == "true" ]]; then
-        $HOME/.bin/do-not-disturb off
+toggle() {
+    if [[ -f "$STATE_FILE" ]]; then
+        rm "$STATE_FILE"
+        pkill -x xfce4-notifyd
+        nohup xfce4-notifyd >/dev/null 2>&1 &
     else
-        $HOME/.bin/do-not-disturb on
+        touch "$STATE_FILE"
+        pkill -x xfce4-notifyd
     fi
-    ;;
-*)
-    muted=$(xfconf-query -c xfce4-notifyd -p /do-not-disturb 2>/dev/null)
-    if [[ $muted == "true" ]]; then
+}
+
+status() {
+    if [[ -f "$STATE_FILE" ]]; then
         echo "%{T3}%{F${INACTIVE_COLOR}}󰂛%{F-}%{T-}"
     else
         echo "%{T3}%{F${ACTIVE_COLOR}}󰂞%{F-}%{T-}"
     fi
-    ;;
+}
+
+case "$1" in
+    --toggle)
+        toggle
+        ;;
+    *)
+        status
+        ;;
 esac
+
+
+
+
+# #!/bin/bash
+
+# ACTIVE_COLOR="#E0B42F"
+# INACTIVE_COLOR="#858585"
+
+# case "$1" in
+# --toggle)
+#     muted=$(xfconf-query -c xfce4-notifyd -p /do-not-disturb 2>/dev/null)
+#     if [[ $muted == "true" ]]; then
+#         $HOME/.bin/do-not-disturb off
+#     else
+#         $HOME/.bin/do-not-disturb on
+#     fi
+#     ;;
+# *)
+#     muted=$(xfconf-query -c xfce4-notifyd -p /do-not-disturb 2>/dev/null)
+#     if [[ $muted == "true" ]]; then
+#         echo "%{T3}%{F${INACTIVE_COLOR}}󰂛%{F-}%{T-}"
+#     else
+#         echo "%{T3}%{F${ACTIVE_COLOR}}󰂞%{F-}%{T-}"
+#     fi
+#     ;;
+# esac
