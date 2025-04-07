@@ -47,6 +47,7 @@ alias ns="npm start"
 alias cl="clear"
 alias ip='curl -X GET "https://httpbin.org/ip" -H "accept: application/json"'
 alias resetant='antidote update'
+alias ai="aichat"
 
 
 # Work Commands
