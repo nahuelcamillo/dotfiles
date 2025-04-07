@@ -2,7 +2,8 @@
 
 # Lista de paquetes en repositorios oficiales
 PACMAN_PACKAGES=(
-    alacritty
+    aichat
+	alacritty
     atool
 	arc-gtk-theme
     base-devel
