@@ -37,7 +37,7 @@ super + shift + o; g
 		google-chrome-stable
 
 super + shift + o; v
-		code
+		cursor
 
 super + shift + o; a
 		firefox --new-tab "https://chatgpt.com/"
@@ -55,7 +55,7 @@ super + shift + o; s
 		spotify
 
 super + shift + o; t
-		telegram-desktop
+		Telegram
 
 super + shift + o; w
 		whatsapp
