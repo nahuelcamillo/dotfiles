@@ -53,7 +53,7 @@ alias ai="aichat"
 # Work Commands
 alias p="cd ~/Documents/Projects/"
 alias laramie="cd ~/Documents/Projects/Laramie"
-alias rabbitup="cd ~/Documents/Projects/Laramie/devops/docker/rabbitmq && docker-compose up -d"
+alias rabbitup="cd ~/Documents/Projects/Rabbit && docker-compose up -d"
 alias rabbitdown="cd ~/Documents/Projects/Rabbit && docker-compose down"
 #alias kvpnl="sudo pkill openvpn"
 alias dbsup="cd ~/Documents/Projects/Laramie/dbs && docker-compose up -d"
@@ -86,8 +86,8 @@ alias cpl="cfg pull"
 # append dotnet
 path+=('~/.dotnet/tools')
 # export to sub-processes (make it inherited by child processes)
-export PATH
 export PATH="$HOME/.local/bin:$PATH"
+export PATH
 export PATH="$HOME/.npm-global/bin:$PATH"
 
 
