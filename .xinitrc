@@ -3,6 +3,13 @@
 # ~/.xinitrc
 #
 # Executed by startx (run your window manager from here)
+# Si no hay DBUS, iniciarlo
+
+[ -f ~/.xprofile ] && . ~/.xprofile
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
 
 userresources=$HOME/.Xresources
 sysresources=/etc/X11/xinit/.Xresources
